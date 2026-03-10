@@ -43,18 +43,14 @@ body {
     background-color: #f4f4f4;
 }
 
-#quiz-container {
-    /* 🚀 關鍵修改：在手機上寬度 100%，但不超過 600px */
-    width: 100%; 
-    max-width: 600px; 
-    
-    /* 確保內距不會撐開寬度 */
-    box-sizing: border-box; 
-    padding: 20px;
-    background-color: white;
-    min-height: 100vh; /* 讓背景撐滿高度 */
+/* 讓容器寬度隨螢幕變化，但設定最大上限 */
+.container {
+    width: 100%;           /* 寬度填滿 */
+    max-width: 600px;      /* 在大螢幕（如平板）時，不至於拉得太開 */
+    margin: 0 auto;        /* 居中顯示 */
+    box-sizing: border-box; /* 確保 padding 不會撐破寬度 */
+    padding: 15px;         /* 留一點內邊距，文字才不會貼邊 */
 }
-
 /* 🚀 選項按鈕也要撐滿 */
 .option-btn {
     width: 100%; 
@@ -421,3 +417,4 @@ window.onload = () => {
 
 </body>
 </html>
+
